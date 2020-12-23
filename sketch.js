@@ -26,7 +26,7 @@ function setup() {
   leftSide = new Dustbin(550, 620, 20, 100);
   bottom = new Dustbin(610, 660, 100, 20);
   rightSide = new Dustbin(670, 620, 20, 100)
-
+  keyPressed();
 	Engine.run(engine);
   
 }
@@ -36,7 +36,7 @@ function draw() {
   rectMode(CENTER);
   background(0);
   Engine.update(engine);
-  keyPressed();
+  
 
   paper.display();
   ground.display();
@@ -51,8 +51,7 @@ function keyPressed()
 {
 	if (keyCode === UP_ARROW)
 	{
-		Matter.Body.applyForce(paper.body,paper.body.position,{x:2,y:-10})
-
+		Matter.Body.applyForce(paper.body,paper.body.position,{x:85,y:-100})
 	}
 
 }
